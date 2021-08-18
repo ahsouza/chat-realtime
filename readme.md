@@ -17,3 +17,16 @@ wwwroot/js/signalr/dist/browser/signalr.js written to disk
 wwwroot/js/signalr/dist/browser/signalr.min.js written to disk
 Installed library "@microsoft/signalr@latest" to "wwwroot/js/signalr"
 ```
+
+In the integrated terminal, run the following command:
+
+```sh
+dotnet watch run -p chat-realtime.csproj
+```
+
+If you get the error `ERR_SPDY_INADEQUATE_TRANSPORT_SECURITY` in Chrome, run these commands to update your development `certificate`:
+
+```sh
+dotnet dev-certs https --clean
+dotnet dev-certs https --trust
+```
